@@ -136,20 +136,21 @@ ul{margin:0;padding:0;list-style:none}
 .flag-es{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 50%22 preserveAspectRatio=%22none%22%3E%3Crect width=%22200%22 height=%2250%22 fill=%22%23AA151B%22/%3E%3Crect y=%2212.5%22 width=%22200%22 height=%2225%22 fill=%22%23F1BF00%22/%3E%3C/svg%3E")}
 .flag-en{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 60 30%22 preserveAspectRatio=%22none%22%3E%3CclipPath id=%22s%22%3E%3Cpath d=%22M0,0 v30 h60 v-30 z%22/%3E%3C/clipPath%3E%3CclipPath id=%22t%22%3E%3Cpath d=%22M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z%22/%3E%3C/clipPath%3E%3Cg clip-path=%22url(%23s)%22%3E%3Cpath d=%22M0,0 v30 h60 v-30 z%22 fill=%22%23012169%22/%3E%3Cpath d=%22M0,0 L60,30 M60,0 L0,30%22 stroke=%22%23fff%22 stroke-width=%226%22/%3E%3Cpath d=%22M0,0 L60,30 M60,0 L0,30%22 clip-path=%22url(%23t)%22 stroke=%22%23C8102E%22 stroke-width=%224%22/%3E%3Cpath d=%22M30,0 v30 M0,15 h60%22 stroke=%22%23fff%22 stroke-width=%2210%22/%3E%3Cpath d=%22M30,0 v30 M0,15 h60%22 stroke=%22%23C8102E%22 stroke-width=%226%22/%3E%3C/g%3E%3C/svg%3E")}
 .flag-pt{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 50%22 preserveAspectRatio=%22none%22%3E%3Crect width=%22200%22 height=%2250%22 fill=%22%23009C3B%22/%3E%3Cpolygon points=%22100,4 194,25 100,46 6,25%22 fill=%22%23FFDF00%22/%3E%3Ccircle cx=%22100%22 cy=%2225%22 r=%2214%22 fill=%22%23002776%22/%3E%3Cpath d=%22M86.5 24 Q100 19.5 113.5 27%22 stroke=%22%23fff%22 stroke-width=%222.4%22 fill=%22none%22/%3E%3C/svg%3E")}
-.lang-btn,.lang-opt{display:flex;align-items:center;gap:8px;border:2px solid var(--line);background-size:100% 100%;background-position:center;background-repeat:no-repeat;cursor:pointer;color:var(--navy);font:500 .88rem/1.2 var(--font-body)}
-.lang-btn{min-width:190px;height:38px;padding:0 5px 0 5px;border-radius:999px;justify-content:space-between}
-.lang-chip{display:inline-flex;align-items:center;gap:6px;background:#FFFFFF;color:var(--navy);border-radius:999px;padding:3px 12px;font-size:.88rem;font-weight:500;line-height:1.35}
-.lang-chev{display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#FFFFFF;color:var(--navy)}
+.flag{display:inline-block;flex:none;width:26px;height:17px;border-radius:3px;border:1px solid currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat}
+.lang-btn,.lang-opt{display:flex;align-items:center;gap:10px;cursor:pointer;color:var(--text);background:transparent;font:500 .9rem/1.2 var(--font-body)}
+.lang-btn{height:36px;padding:0 12px 0 14px;border:2px solid var(--line);border-radius:999px;justify-content:space-between}
+.lang-btn:hover{background:var(--mint);color:var(--navy)}
+.lang-txt{white-space:nowrap}
+.lang-chev{display:flex;align-items:center;color:inherit}
 .lang-chev .icon{font-size:15px;transition:transform .2s}
 .lang-btn[aria-expanded="true"] .lang-chev .icon{transform:rotate(180deg)}
-.lang-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:160;min-width:260px;display:grid;gap:8px;padding:10px;background:var(--header-bg);border:2px solid var(--line);border-radius:20px;box-shadow:0 10px 26px rgba(0,32,91,.28)}
+.lang-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:160;min-width:190px;display:grid;gap:2px;padding:8px;background:var(--header-bg);border:2px solid var(--line);border-radius:18px;box-shadow:0 10px 26px rgba(0,32,91,.28)}
 .lang-menu[hidden]{display:none}
-.lang-opt{width:100%;height:48px;padding:0 8px;border-radius:999px;text-align:left}
-.lang-opt[aria-current="true"]{box-shadow:0 0 0 3px var(--focus)}
-.lang-opt .icon{font-size:15px;color:var(--navy)}
-.lang-opt:hover .lang-chip{background:var(--mint)}
+.lang-opt{width:100%;min-height:42px;padding:0 12px;border:0;border-radius:12px;justify-content:space-between;text-align:left}
+.lang-opt:hover,.lang-opt[aria-current="true"]{background:var(--mint);color:var(--navy)}
+.lang-opt[aria-current="true"]{font-weight:600}
 .lang :focus-visible{outline:3px solid var(--focus);outline-offset:2px}
-@media (max-width:640px){.fs-label{display:none}.fs-track{width:120px}.util-inner{justify-content:space-between;gap:6px 14px}.lang-btn{min-width:140px}.lang-menu{min-width:230px}}
+@media (max-width:640px){.fs-label{display:none}.fs-track{width:120px}.util-inner{justify-content:space-between;gap:6px 14px}}
 
 /* ---------- Secciones ---------- */
 section{padding:96px 0}
@@ -467,11 +468,11 @@ section{padding:96px 0}
         <span class="fs-a fs-lg" aria-hidden="true">A</span>
       </div>
       <div class="lang" id="lang">
-        <button type="button" class="lang-btn flag-es" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu" aria-label="Idioma: Español"><span class="lang-chip" lang="es" id="langCur">Español</span><span class="lang-chev" aria-hidden="true"><svg class="icon"><use href="#i-chevron"/></svg></span></button>
+        <button type="button" class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu" aria-label="Idioma: Español"><span class="lang-txt" id="langCur">Español</span><span class="flag flag-es" id="langFlag" aria-hidden="true"></span><span class="lang-chev" aria-hidden="true"><svg class="icon"><use href="#i-chevron"/></svg></span></button>
         <ul class="lang-menu" id="langMenu" hidden>
-          <li><button type="button" class="lang-opt flag-es" data-lang="es" lang="es" aria-current="true"><span class="lang-chip">Español</span></button></li>
-          <li><button type="button" class="lang-opt flag-en" data-lang="en" lang="en"><span class="lang-chip">English</span></button></li>
-          <li><button type="button" class="lang-opt flag-pt" data-lang="pt" lang="pt"><span class="lang-chip">Português</span></button></li>
+          <li><button type="button" class="lang-opt" data-lang="es" lang="es" aria-current="true"><span class="lang-txt">Español</span><span class="flag flag-es" aria-hidden="true"></span></button></li>
+          <li><button type="button" class="lang-opt" data-lang="en" lang="en"><span class="lang-txt">English</span><span class="flag flag-en" aria-hidden="true"></span></button></li>
+          <li><button type="button" class="lang-opt" data-lang="pt" lang="pt"><span class="lang-txt">Português</span><span class="flag flag-pt" aria-hidden="true"></span></button></li>
         </ul>
       </div>
     </div>
@@ -1026,7 +1027,7 @@ section{padding:96px 0}
     document.title=l==='es'?ORIG_TITLE:(d[norm(ORIG_TITLE)]||ORIG_TITLE);
     if(metaDesc)metaDesc.setAttribute('content',l==='es'?ORIG_DESC:(d[norm(ORIG_DESC)]||ORIG_DESC));
     /* botón de idioma */
-    langBtn.className='lang-btn flag-'+l;langCur.textContent=LANG_NAME[l];
+    document.getElementById('langFlag').className='flag flag-'+l;langCur.textContent=LANG_NAME[l];
     langBtn.setAttribute('aria-label',({es:'Idioma',en:'Language',pt:'Idioma'})[l]+': '+LANG_NAME[l]);
     langMenu.querySelectorAll('.lang-opt').forEach(function(o){o.setAttribute('aria-current',o.getAttribute('data-lang')===l?'true':'false');});
     refreshDynamic();fitHeader();
